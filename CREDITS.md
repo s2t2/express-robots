@@ -5,3 +5,4 @@
   + http://expressjs.com/en/starter/hello-world.html
   + http://ejs.co/
   + http://expressjs.com/en/starter/basic-routing.html
+  + https://scotch.io/tutorials/use-ejs-to-template-your-node-application

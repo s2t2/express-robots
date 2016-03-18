@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/robots', function (req, res) {
-  res.render('robots', {
+  res.render('robots/index', {
     title: 'All Robots'
   });
 });
