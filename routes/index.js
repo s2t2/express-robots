@@ -10,7 +10,12 @@ router.get('/', function(req, res, next) {
 
 router.get('/robots', function (req, res) {
   res.render('robots/index', {
-    title: 'All Robots'
+    title: 'All Robots',
+    robots: [
+      {id:1, name:"r2d2"},
+      {id:2, name:"c3po"},
+      {id:3, name:"bb8"},
+    ]
   });
 });
 
