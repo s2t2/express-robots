@@ -13,7 +13,7 @@ npm install express-generator -g
 Generate a new express application.
 
 ```` sh
-express robots_app
+express robots_app --ejs
 cd robots_app/
 npm install
 ````
