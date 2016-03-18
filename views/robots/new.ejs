@@ -8,6 +8,18 @@
       <% include ../partials/header %>
     </header>
 
+    <h2><%= page_title %></h2>
+
+    <form method="post" action="/robots/new">
+      <label for="robot_name">Name:</label>
+      <input type="text" name="robot_name">
+
+      <input type="submit">
+    </form>
+
+
+
+    <hr style="margin-top:2em;">
     <footer>
       <% include ../partials/footer %>
     </footer>

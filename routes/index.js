@@ -11,6 +11,7 @@ router.get('/', function(req, res, next) {
 router.get('/robots', function (req, res) {
   res.render('robots/index', {
     title: 'All Robots',
+    page_title: 'All Robots',
     robots: [
       {id:1, name:"r2d2"},
       {id:2, name:"c3po"},
@@ -21,8 +22,14 @@ router.get('/robots', function (req, res) {
 
 router.get('/robots/new', function (req, res) {
   res.render('robots/new', {
-    title: 'Add a New Robot'
+    title: 'Add a New Robot',
+    page_title: 'Add a New Robot'
   });
+});
+
+router.post('/robots/new', function (req, res) {
+  console.log('Robot name: ' + req.body.robot_name);
+  res.redirect('/robots');
 });
 
 module.exports = router;
