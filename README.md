@@ -1,4 +1,4 @@
-# Express Generator Assignment
+# Learning Express
 
 ## Prerequisites
 
