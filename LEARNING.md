@@ -7,6 +7,7 @@ Install global packages for command-line access.
 ```` sh
 npm install express-generator -g # enables app-generation CLI
 npm install nodemon -g # obviates need to restart dev server every time a file is changed
+npm install -g node-inspector # allows you to insert debugging breakpoints
 npm install -g knex # enables a database migration CLI
 ````
 
@@ -72,7 +73,10 @@ module.exports = {
       database: 'robots_dev'
     },
     migrations: {
-      directory: __dirname+"/db/migrations",
+      directory: __dirname+"/db/migrations"
+    },
+    seeds: {
+      directory: __dirname+"/db/seeds"
     }
   },
 
@@ -80,10 +84,14 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL,
     migrations: {
-      directory: __dirname+"/db/migrations",
+      directory: __dirname+"/db/migrations"
+    },
+    seeds: {
+      directory: __dirname+"/db/seeds"
     }
   }
 };
+
 ````
 
 Optionally set the `NODE_ENV` environment variable to "development"; note the default environment for migrations is "development".
@@ -98,4 +106,16 @@ Migrate the database.
 
 ```` sh
 knex migrate:latest
+````
+
+Generate a new database seed file.
+
+```` sh
+knex seed:make insert_robots
+````
+
+Seed database.
+
+```` sh
+knex seed:run
 ````

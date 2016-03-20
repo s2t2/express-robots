@@ -36,6 +36,12 @@ Migrate database.
 knex migrate:latest
 ````
 
+Seed the database.
+
+```` sh
+knex seed:run
+````
+
 ## Usage
 
 Start the server and visit localhost:3000 in a browser.

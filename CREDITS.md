@@ -32,4 +32,18 @@
   + http://www.dancorman.com/knex-your-sql-best-friend/
   + https://meteor-postgres.readthedocs.org/en/latest/migrations/
   + https://github.com/slco-2016/ch-courtsms/blob/0b4fa5ad5fb880d9fd1f2f634942f5e2f1c0c7fa/server/db.js
+  + https://github.com/slco-2016/cjs_client_capture/blob/a691e23b4f0ca4b9bcaf862e60f5f3a073cca394/migrations/20160226172002_init.js
   + http://knexjs.org/#Schema
+
+## Debugging
+
+ + http://daguar.github.io/2014/06/05/just-dropped-in-interactive-coding-in-ruby-python-javascript/
+ + http://gregerg.com/using-node-inspector-with-nodemon/
+ + https://github.com/node-inspector/node-inspector
+ + https://www.airpair.com/node.js/posts/top-10-mistakes-node-developers-make
+ + https://github.com/alidavut/locus
+
+## Using knex QueryBuilder results
+
+ + http://stackoverflow.com/questions/20603800/how-to-do-select-from-using-knex-in-javascript
+ + http://knexjs.org/#Interfaces
