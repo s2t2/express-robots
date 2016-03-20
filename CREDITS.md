@@ -43,7 +43,11 @@
  + https://www.airpair.com/node.js/posts/top-10-mistakes-node-developers-make
  + https://github.com/alidavut/locus
 
-## Using knex QueryBuilder results
+## Seeding database
+
+ + https://gist.github.com/bq1990/4f24eca04fe006ccf1e5
+
+## Querying database
 
  + http://stackoverflow.com/questions/20603800/how-to-do-select-from-using-knex-in-javascript
  + http://knexjs.org/#Interfaces
