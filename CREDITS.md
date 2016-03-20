@@ -34,6 +34,11 @@
   + https://github.com/slco-2016/ch-courtsms/blob/0b4fa5ad5fb880d9fd1f2f634942f5e2f1c0c7fa/server/db.js
   + https://github.com/slco-2016/cjs_client_capture/blob/a691e23b4f0ca4b9bcaf862e60f5f3a073cca394/migrations/20160226172002_init.js
   + http://knexjs.org/#Schema
+  + http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/
+  + http://docs.sequelizejs.com/en/1.7.0/articles/express/
+  + http://npm-stat.com/charts.html?package=knex&author=&from=2014-03-20&to=2016-03-19
+  + http://npm-stat.com/charts.html?package=sequelize&author=&from=&to=
+  + http://npm-stat.com/charts.html?package=bookshelf&author=&from=2014-03-21&to=2016-03-20
 
 ## Debugging
 
@@ -51,3 +56,9 @@
 
  + http://stackoverflow.com/questions/20603800/how-to-do-select-from-using-knex-in-javascript
  + http://knexjs.org/#Interfaces
+ + http://stackoverflow.com/questions/36111414/how-to-access-knex-query-results
+
+## Handling Async
+
+ + https://github.com/caolan/async
+ + http://stackoverflow.com/questions/36111414/how-to-access-knex-query-results#comment59864678_36111414
