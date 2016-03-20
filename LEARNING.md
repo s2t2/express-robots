@@ -145,3 +145,15 @@ var db  = require('./db');
 var app = express();
 // ...
 ````
+
+<hr>
+
+### Flash Messages
+
+Flash messages require sessions.
+
+```` sh
+npm install connect-flash --save
+npm install express-messages --save
+npm install express-session --save
+````

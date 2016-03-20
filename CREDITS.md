@@ -62,3 +62,13 @@
 
  + https://github.com/caolan/async
  + http://stackoverflow.com/questions/36111414/how-to-access-knex-query-results#comment59864678_36111414
+
+## Flash Messaging
+
+ + https://github.com/jaredhanson/connect-flash
+ + http://stackoverflow.com/questions/23160743/how-to-send-flash-messages-in-express-4-0
+ + https://gist.github.com/tpblanke/11061808
+ + https://gist.github.com/brianmacarthur/a4e3e0093d368aa8e423
+ + https://github.com/expressjs/session/issues/56
+ + https://github.com/expressjs/session#options
+ + http://stackoverflow.com/a/10330401/670433

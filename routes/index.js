@@ -26,9 +26,9 @@ router.get('/robots', function (req, res) {
       title: 'All Robots',
       page_title: 'All Robots',
       robots: bots
-    });
+    }); // res.render
   }); // knex.select
-});
+}); // router.get
 
 router.get('/robots/new', function (req, res) {
   res.render('robots/new', {
@@ -38,8 +38,11 @@ router.get('/robots/new', function (req, res) {
 });
 
 router.post('/robots/new', function (req, res) {
-  console.log('Robot name: ' + req.body.robot_name);
-  res.redirect('/robots');
+  robot_name = req.body.robot_name
+  console.log('Robot name: ' + robot_name);
+
+  req.flash('info', 'Created robot named '+robot_name );
+  res.redirect('/robots')
 });
 
 module.exports = router;
