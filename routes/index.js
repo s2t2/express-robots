@@ -1,16 +1,6 @@
 var express = require('express');
 var router = express.Router();
-//var db = require("../db");
-
-var knex = require('knex')({
-  client: 'pg',
-  connection: {
-    user: 'robot',
-    password: 'r0b0t!',
-    database: 'robots_dev'
-  }
-}); // todo: read this from config file.
-
+var knex = require("../db");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

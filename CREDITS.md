@@ -41,6 +41,8 @@
   + http://npm-stat.com/charts.html?package=bookshelf&author=&from=2014-03-21&to=2016-03-20
   + https://www.npmjs.com/package/bookshelf-modelbase
   + https://github.com/bsiddiqui/bookshelf-modelbase#modelfindorcreate
+  + https://blog.redradix.com/an-architecture-for-complex-node-js-apps-with-dependency-injection/
+  + http://davidhunt.io/making-a-new-node-js-app-feel-more-like-rails-part-1
 
 ## Debugging
 

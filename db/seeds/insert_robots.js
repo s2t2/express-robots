@@ -1,24 +1,18 @@
 
 exports.seed = function(knex, Promise) {
+  var robots = [{name:"r2d2"}, {name:"c3po"}, {name:"bb8"}]
+
   var robotPromises = [];
 
-  var d = knex('robots').del()
-  robotPromises.push(d);
+  // destroy all records in the table...
+  var destruction_promise = knex('robots').del()
+  robotPromises.push(destruction_promise);
 
-  var robots = [
-    {id:1, name:"r2d2"},
-    {id:2, name:"c3po"},
-    {id:3, name:"bb8"},
-  ]
-
-  robots.forEach(function(robot){
-    var p = knex('robots').insert({
-      id: robot["id"],
-      name: robot["name"]
-    })
-    robotPromises.push(p);
-  });
+  // add a new record for each robot...
+  var insertion_promise = knex('robots').insert(
+    robots, 'id' // auto-increment the id instead of setting it
+  )
+  robotPromises.push(insertion_promise);
 
   return Promise.all(robotPromises);
-
 };
