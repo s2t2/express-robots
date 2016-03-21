@@ -33,13 +33,13 @@ psql -U robot --password -d postgres -f $(pwd)/db/create.sql
 Migrate database.
 
 ```` sh
-knex migrate:latest
+knex migrate:latest --knexfile db/config.js
 ````
 
 Seed the database.
 
 ```` sh
-knex seed:run
+knex seed:run --knexfile db/config.js
 ````
 
 ## Usage

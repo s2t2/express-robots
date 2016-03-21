@@ -1,3 +1,4 @@
+// formerly known as knexfile.js
 
 module.exports = {
   development: {
@@ -8,10 +9,10 @@ module.exports = {
       database: 'robots_dev'
     },
     migrations: {
-      directory: __dirname+"/db/migrations"
+      directory: __dirname+"/migrations"
     },
     seeds: {
-      directory: __dirname+"/db/seeds"
+      directory: __dirname+"/seeds"
     }
   },
 
@@ -19,10 +20,10 @@ module.exports = {
     client: 'pg',
     connection: process.env.DATABASE_URL,
     migrations: {
-      directory: __dirname+"/db/migrations"
+      directory: __dirname+"/migrations"
     },
     seeds: {
-      directory: __dirname+"/db/seeds"
+      directory: __dirname+"/seeds"
     }
   }
 };
