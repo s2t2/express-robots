@@ -72,7 +72,7 @@ Deploy.
 git push heroku master
 ````
 
-Create, migrate, and seed production database.
+Create, migrate, and seed production database (NOTE: this is already happening as post-installation scripts in package.json).
 ```` sh
 heroku pg:reset DATABASE
 heroku run NODE_ENV=production knex migrate:latest --knexfile db/config.js
