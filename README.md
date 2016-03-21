@@ -1,6 +1,8 @@
 # Robots App
 
-## Prerequisites
+## Contributing
+
+### Prerequisites
 
 Install node and npm.
 
@@ -42,10 +44,36 @@ Seed the database.
 knex seed:run --knexfile db/config.js
 ````
 
-## Usage
+### Usage
 
 Start the server and visit localhost:3000 in a browser.
 
 ```` sh
 DEBUG=robots_app:* npm start
+````
+
+### Deploying
+
+Set environment variable(s).
+
+```` sh
+heroku config:set NODE_ENV=production
+````
+
+Ensure postgresql addon is installed.
+
+```` sh
+heroku addons:create heroku-postgresql:hobby-dev
+````
+
+Deploy.
+
+```` sh
+git push heroku master
+````
+
+Migrate production database.
+```` sh
+heroku run NODE_ENV=production knex migrate:latest --knexfile db/config.js
+heroku run NODE_ENV=production knex seed:run --knexfile db/config.js
 ````

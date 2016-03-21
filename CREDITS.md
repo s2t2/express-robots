@@ -76,3 +76,7 @@
  + https://github.com/expressjs/session/issues/56
  + https://github.com/expressjs/session#options
  + http://stackoverflow.com/a/10330401/670433
+
+## Deploying
+
+ + https://devcenter.heroku.com/articles/getting-started-with-nodejs
