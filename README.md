@@ -54,7 +54,7 @@ DEBUG=robots_app:* npm start
 
 ### Deploying
 
-Set environment variable(s).
+Set environment variable(s). Setting `NODE_ENV` is technically unnecessary because heroku does it automatically during deploy.
 
 ```` sh
 heroku config:set NODE_ENV=production SESSION_SECRET=s0m3l0ngstr1ng123456
