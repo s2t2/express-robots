@@ -67,7 +67,7 @@
  + https://github.com/caolan/async
  + http://stackoverflow.com/questions/36111414/how-to-access-knex-query-results#comment59864678_36111414
 
-## Flash Messaging
+## Flash Messaging and Sessions
 
  + https://github.com/jaredhanson/connect-flash
  + http://stackoverflow.com/questions/23160743/how-to-send-flash-messages-in-express-4-0
@@ -76,6 +76,9 @@
  + https://github.com/expressjs/session/issues/56
  + https://github.com/expressjs/session#options
  + http://stackoverflow.com/a/10330401/670433
+ + http://expressjs-book.com/index.html%3Fp=128.html
+ + https://github.com/expressjs/session#compatible-session-stores
+ + https://github.com/slco-2016/ch-courtsms/blob/master/server/app.js
 
 ## Deploying
 

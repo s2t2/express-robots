@@ -4,7 +4,9 @@ var knex = require("../db");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  // console.log(process.env.NODE_ENV)
+  //console.log(process.env.NODE_ENV)
+  console.log(req.session)
+
   res.render('index', {
     title: 'Robots App!'
   });
