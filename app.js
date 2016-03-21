@@ -26,26 +26,25 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(flash()); // @kuanb says this should go above app.use(session)
 app.use(session({
   cookie: { maxAge: 60000 },
   // store: sessionStore,
-  secret: 'robots-session-secret',
+  secret: process.env.SESSION_SECRET || 'robots-session-secret',
   name: 'robots-session-name',
   resave: true,
   saveUninitialized: true
 }));
-app.use(flash());
 
-// Include flash messages (must be above app.use('/', routes); but not sure why...)
+// Include flash messages ... should go above app.use('/', routes)
 app.use(function (req, res, next) {
   res.locals.messages = require('express-messages')(req, res);
   next();
 });
 
+
 app.use('/', routes);
 app.use('/users', users);
-
 
 
 // catch 404 and forward to error handler
