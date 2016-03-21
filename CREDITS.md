@@ -89,3 +89,4 @@
 ## Deploying
 
  + https://devcenter.heroku.com/articles/getting-started-with-nodejs
+ + https://devcenter.heroku.com/articles/nodejs-support
