@@ -84,6 +84,7 @@
  + https://github.com/llambda/connect-session-knex/blob/master/Oldversions.md
  + http://stackoverflow.com/questions/15693192/heroku-node-js-error-web-process-failed-to-bind-to-port-within-60-seconds-of
  + http://stackoverflow.com/a/21560720/670433
+ + http://stackoverflow.com/questions/31251482/setting-up-the-port-with-heroku#comment50502757_31251482
 
 ## Deploying
 

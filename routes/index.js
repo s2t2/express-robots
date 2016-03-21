@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/robots', function (req, res) {
-  response = knex.select('id', 'name').from('robots').orderBy('id', 'desc').then(function(bots){
+  knex.select('id', 'name').from('robots').orderBy('id', 'desc').then(function(bots){
     res.render('robots/index', {
       title: 'All Robots',
       page_title: 'All Robots',
