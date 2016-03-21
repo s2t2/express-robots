@@ -41,19 +41,19 @@ router.post('/robots/new', function (req, res) {
   robot_name = req.body.robot_name
   console.log('Robot name: ' + robot_name);
 
-  //knex('robots').where('name', robot_name).update({
-  //  updated_at: knex.raw('now()')
-  //}).then(function(bot){
-  //  req.flash('info', 'Created robot named '+robot_name );
-  //  req.flash('info', 'Created robot named '+bot );
-  //  res.redirect('/robots')
-  //})
-
-  knex('robots').insert([{'name': robot_name}], 'id').then(function(bot_id){ // , 'id' facilitates the auto-incrementing and avoids error... Unhandled rejection error: insert into "robots" ("name") values ($1) - duplicate key value violates unique constraint "robots_pkey"
-    console.log(bot_id)
-    req.flash('info', 'Created robot named '+robot_name );
-    res.redirect('/robots')
-  })
-});
+  knex('robots').where({name: robot_name}).then(function(robots){
+    if (robots.length > 0) {
+      console.log(robots)
+      req.flash('error', 'Found existing robot named '+robot_name );
+      res.redirect('/robots')
+    } else {
+      knex('robots').insert([{'name': robot_name}], 'id').then(function(bot_id){ // , 'id' facilitates the auto-incrementing and avoids error... Unhandled rejection error: insert into "robots" ("name") values ($1) - duplicate key value violates unique constraint "robots_pkey"
+        console.log(bot_id)
+        req.flash('info', 'Created new robot named '+robot_name );
+        res.redirect('/robots')
+      }) // knex .insert
+    } // if robot exists
+  }) // knex .where
+}); // router.get
 
 module.exports = router;
