@@ -6,12 +6,11 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash = require('connect-flash');
-
+//var db  = require('./db');
+//var sessionStore = new session.MemoryStore;
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-//var db  = require('./db');
-//var sessionStore = new session.MemoryStore;
 
 var app = express();
 
@@ -26,12 +25,14 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(flash()); // @kuanb says this should go above app.use(session)
+
+
+app.use(flash());
 app.use(session({
-  cookie: { maxAge: 60000 },
+  //cookie: { maxAge: 60000 },
   // store: sessionStore,
   secret: process.env.SESSION_SECRET || 'robots-session-secret',
-  name: 'robots-session-name',
+  //name: 'robots-session-name',
   resave: true,
   saveUninitialized: true
 }));

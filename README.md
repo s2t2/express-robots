@@ -57,7 +57,7 @@ DEBUG=robots_app:* npm start
 Set environment variable(s).
 
 ```` sh
-heroku config:set NODE_ENV=production
+heroku config:set NODE_ENV=production SESSION_SECRET=s0m3l0ngstr1ng123456
 ````
 
 Ensure postgresql addon is installed.
