@@ -82,6 +82,8 @@
  + https://github.com/voxpelli/node-connect-pg-simple/issues/26
  + https://github.com/llambda/connect-session-knex
  + https://github.com/llambda/connect-session-knex/blob/master/Oldversions.md
+ + http://stackoverflow.com/questions/15693192/heroku-node-js-error-web-process-failed-to-bind-to-port-within-60-seconds-of
+ + http://stackoverflow.com/a/21560720/670433
 
 ## Deploying
 
