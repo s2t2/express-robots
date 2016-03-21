@@ -35,7 +35,6 @@ psql -U robot --password -d postgres -f $(pwd)/db/create.sql
 Migrate database.
 
 ```` sh
-# not in use ... psql robots_dev < node_modules/connect-pg-simple/table.sql # add table for session storage
 knex migrate:latest --knexfile db/config.js
 ````
 
@@ -73,8 +72,9 @@ Deploy.
 git push heroku master
 ````
 
-Migrate production database.
+Create, migrate, and seed production database.
 ```` sh
+heroku pg:reset DATABASE
 heroku run NODE_ENV=production knex migrate:latest --knexfile db/config.js
 heroku run NODE_ENV=production knex seed:run --knexfile db/config.js
 ````
