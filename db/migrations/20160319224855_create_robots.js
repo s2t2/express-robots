@@ -2,12 +2,12 @@
 exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTable("robots", function (table) {
-      table.increments(); // integer id
-      table.string("name").notNullable();
+      table.increments(); // auto-incrementing integer id
+      table.string("name").notNullable().unique();
 
-      //table.timestamps();
+      //table.timestamps(); // creates created_at and updated_at but with no logic ...
       table.timestamp("created_at").defaultTo(knex.raw('now()')).notNullable();
-      table.timestamp("updated_at")
+      table.timestamp("updated_at").defaultTo(knex.raw('now()')).notNullable();
     }) // create robots table
   ]);
 };

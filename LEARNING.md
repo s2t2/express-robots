@@ -119,3 +119,41 @@ Seed database.
 ```` sh
 knex seed:run
 ````
+
+<hr>
+
+
+Stick a database configuration file in the root directory.
+
+```` js
+// db.js
+var config      = require('knexfile.js');
+var env         = 'development';
+var knex        = require('knex')(config[env]);
+
+module.exports = knex;
+
+knex.migrate.latest([config]);
+````
+
+Require the database connection.
+
+```` js
+// app.js
+// ...
+var db  = require('./db');
+var app = express();
+// ...
+````
+
+<hr>
+
+### Flash Messages
+
+Flash messages require sessions.
+
+```` sh
+npm install connect-flash --save
+npm install express-messages --save
+npm install express-session --save
+````

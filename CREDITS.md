@@ -34,6 +34,15 @@
   + https://github.com/slco-2016/ch-courtsms/blob/0b4fa5ad5fb880d9fd1f2f634942f5e2f1c0c7fa/server/db.js
   + https://github.com/slco-2016/cjs_client_capture/blob/a691e23b4f0ca4b9bcaf862e60f5f3a073cca394/migrations/20160226172002_init.js
   + http://knexjs.org/#Schema
+  + http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/
+  + http://docs.sequelizejs.com/en/1.7.0/articles/express/
+  + http://npm-stat.com/charts.html?package=knex&author=&from=2014-03-20&to=2016-03-19
+  + http://npm-stat.com/charts.html?package=sequelize&author=&from=&to=
+  + http://npm-stat.com/charts.html?package=bookshelf&author=&from=2014-03-21&to=2016-03-20
+  + https://www.npmjs.com/package/bookshelf-modelbase
+  + https://github.com/bsiddiqui/bookshelf-modelbase#modelfindorcreate
+  + https://blog.redradix.com/an-architecture-for-complex-node-js-apps-with-dependency-injection/
+  + http://davidhunt.io/making-a-new-node-js-app-feel-more-like-rails-part-1
 
 ## Debugging
 
@@ -43,7 +52,27 @@
  + https://www.airpair.com/node.js/posts/top-10-mistakes-node-developers-make
  + https://github.com/alidavut/locus
 
-## Using knex QueryBuilder results
+## Seeding database
+
+ + https://gist.github.com/bq1990/4f24eca04fe006ccf1e5
+
+## Querying database
 
  + http://stackoverflow.com/questions/20603800/how-to-do-select-from-using-knex-in-javascript
  + http://knexjs.org/#Interfaces
+ + http://stackoverflow.com/questions/36111414/how-to-access-knex-query-results
+
+## Handling Async
+
+ + https://github.com/caolan/async
+ + http://stackoverflow.com/questions/36111414/how-to-access-knex-query-results#comment59864678_36111414
+
+## Flash Messaging
+
+ + https://github.com/jaredhanson/connect-flash
+ + http://stackoverflow.com/questions/23160743/how-to-send-flash-messages-in-express-4-0
+ + https://gist.github.com/tpblanke/11061808
+ + https://gist.github.com/brianmacarthur/a4e3e0093d368aa8e423
+ + https://github.com/expressjs/session/issues/56
+ + https://github.com/expressjs/session#options
+ + http://stackoverflow.com/a/10330401/670433
