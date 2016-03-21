@@ -6,8 +6,18 @@ var session = require('express-session');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var flash = require('connect-flash');
-//var db  = require('./db');
-//var sessionStore = new session.MemoryStore;
+
+
+var knexSessionStore = require('connect-session-knex')(session);
+var knex = require("./db");
+var sessionStore = new knexSessionStore({
+    knex: knex, // use existing knex configuration
+    tablename: 'sessions'
+}); // creates a table in the database by default
+
+
+
+
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -29,13 +39,23 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(flash());
 app.use(session({
-  //cookie: { maxAge: 60000 },
-  // store: sessionStore,
+  cookie: { maxAge: 30 * 24 * 60 * 60 * 1000 }, // 30 days
+  store: sessionStore,
+  name: 'robots-session',
   secret: process.env.SESSION_SECRET || 'robots-session-secret',
-  //name: 'robots-session-name',
-  resave: true,
+  resave: false,
   saveUninitialized: true
 }));
+
+
+
+
+
+
+
+
+
+
 
 // Include flash messages ... should go above app.use('/', routes)
 app.use(function (req, res, next) {

@@ -79,6 +79,9 @@
  + http://expressjs-book.com/index.html%3Fp=128.html
  + https://github.com/expressjs/session#compatible-session-stores
  + https://github.com/slco-2016/ch-courtsms/blob/master/server/app.js
+ + https://github.com/voxpelli/node-connect-pg-simple/issues/26
+ + https://github.com/llambda/connect-session-knex
+ + https://github.com/llambda/connect-session-knex/blob/master/Oldversions.md
 
 ## Deploying
 
