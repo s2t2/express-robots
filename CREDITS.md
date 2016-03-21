@@ -39,6 +39,8 @@
   + http://npm-stat.com/charts.html?package=knex&author=&from=2014-03-20&to=2016-03-19
   + http://npm-stat.com/charts.html?package=sequelize&author=&from=&to=
   + http://npm-stat.com/charts.html?package=bookshelf&author=&from=2014-03-21&to=2016-03-20
+  + https://www.npmjs.com/package/bookshelf-modelbase
+  + https://github.com/bsiddiqui/bookshelf-modelbase#modelfindorcreate
 
 ## Debugging
 
